@@ -16,10 +16,17 @@ dotenv.config();
 const app = express();
 
 // Middlewares
-app.use(cors({ 
-    origin: process.env.CLIENT_URL, 
-    credentials: true 
-}));
+app.use(
+    cors({
+        origin: [
+            process.env.CLIENT_URL, 
+            "http://localhost:5173",
+            "https://*.onrender.com"
+        ],
+        credentials: true,
+    })
+);
+
 
 // Parse JSON bodies
 app.use(express.json());
