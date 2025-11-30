@@ -1,5 +1,9 @@
 import axios from "axios";
 
+
+
+console.log("🔥 axios.js LOADED → BASE URL:", import.meta.env.VITE_API_URL);
+
 const api = axios.create({
     baseURL: `${import.meta.env.VITE_API_URL}/api`,
     withCredentials: true,
