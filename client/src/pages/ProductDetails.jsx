@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from "../api/axios";
 import { useCartStore } from "../store/cartStore";
-import "../styles/ProductDetails.css";
+import "../styles/productDetails.css";
+
 
 export default function ProductDetails() {
     const { id } = useParams();
