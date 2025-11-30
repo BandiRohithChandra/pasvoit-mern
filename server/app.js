@@ -17,22 +17,22 @@ const app = express();
 
 app.use(cors({
     origin: function (origin, callback) {
-        const allowed = [
-            process.env.CLIENT_URL,                     // your main frontend
-            "https://pasvoit-mern-1.onrender.com",     // backend
-        ];
-
-        // Allow all Vercel preview deployments:
-        const vercelPattern = /^https:\/\/pasvoit-mern-.*\.vercel\.app$/;
-
-        if (!origin) return callback(null, true); // allow Postman, server calls
-
-        if (allowed.includes(origin) || vercelPattern.test(origin)) {
+        // Allow local dev
+        if (!origin || origin.startsWith("http://localhost")) {
             return callback(null, true);
         }
 
-        console.log("❌ BLOCKED ORIGIN:", origin);
-        return callback(new Error("CORS Not allowed"));
+        // Allow ALL Vercel URLs
+        if (origin.endsWith(".vercel.app")) {
+            return callback(null, true);
+        }
+
+        // Allow your Render frontend (if any)
+        if (origin.includes("pasvoit")) {
+            return callback(null, true);
+        }
+
+        return callback(new Error("CORS Not Allowed: " + origin), false);
     },
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
