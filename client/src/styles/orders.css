@@ -1,0 +1,118 @@
+/* Page Layout */
+.orders-page {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.orders-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Empty Orders */
+.orders-empty {
+    text-align: center;
+    padding: 40px;
+    color: #555;
+}
+
+/* Order Card */
+.order-card {
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #e5e5e5;
+}
+
+/* Header (Amazon-style box) */
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: #f6f6f6;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 2px;
+}
+
+/* Items Section */
+.order-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+/* Product Image */
+.order-item-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Product Info */
+.order-item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.order-item-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.order-item-sub {
+    font-size: 14px;
+    color: #666;
+}
+
+.order-item-price {
+    font-size: 16px;
+    margin-top: 6px;
+    font-weight: bold;
+}
+
+/* Buy Again Button */
+.buy-again-btn {
+    width: fit-content;
+    padding: 8px 14px;
+    background: #ffd814;
+    border: 1px solid #fcd200;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.buy-again-btn:hover {
+    background: #f7ca00;
+}
+
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #007185;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
